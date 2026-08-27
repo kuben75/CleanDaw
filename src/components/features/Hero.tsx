@@ -63,7 +63,7 @@ export function Hero() {
                     <div className="lg:col-span-5 relative">
                         <div className="relative mx-auto max-w-md lg:max-w-none">
 
-                            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 opacity-20 blur-lg" />
+                            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 opacity-20 blur-lg hidden md:block" />
 
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200/60 aspect-[4/3] lg:aspect-[4/5]">
                                 <Image

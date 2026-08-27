@@ -37,7 +37,7 @@ export function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-sm">
                                 <MapPin size={18} className="text-blue-500 flex-shrink-0 mt-0.5" />
-                                <span>Baza: Słopanowo<br/>(Dojazd do klienta lub usługi w bazie)</span>
+                                <span>Firma: Słopanowo<br/>(Dojazd do klienta lub usługi w firmie)</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm">
                                 <Phone size={18} className="text-blue-500 flex-shrink-0" />
