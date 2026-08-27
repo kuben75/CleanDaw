@@ -20,7 +20,7 @@ export const PRICING_DATA: IPricingCategory[] = [
     },
     {
         id: 'auto',
-        label: 'Car Detailing',
+        label: 'Auto Detailing',
         items: [
             {
                 name: 'Oferta Standard',

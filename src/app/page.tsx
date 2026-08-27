@@ -7,6 +7,7 @@ import {ContactSection} from "@/components/features/ContactSection";
 import {ReviewsSection} from "@/components/features/ReviewSection";
 import {Pricing} from "@/components/features/Pricing";
 import {GallerySection} from "@/components/features/GallerySection";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
             <DriveSection />
             <ContactSection />
             <GallerySection />
+            <Analytics />
         </main>
     );
 }
