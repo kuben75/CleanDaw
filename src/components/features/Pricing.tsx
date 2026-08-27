@@ -100,7 +100,7 @@ export function Pricing() {
                 <div className="mt-8 text-center text-sm text-slate-500">
                     * Powyższe ceny mają charakter poglądowy i nie stanowią oferty handlowej w rozumieniu kodeksu
                     cywilnego.
-                    Dojazd do klienta od 150 zł jest wliczony w cenę (Strefa Słopanowo/Poznań).
+                    Dojazd do klienta od 100 zł jest wliczony w cenę (Strefa Słopanowo/Poznań).
                 </div>
 
             </div>

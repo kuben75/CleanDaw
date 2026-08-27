@@ -37,7 +37,7 @@ export function Hero() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <CheckCircle2 size={18} className="text-blue-600 flex-shrink-0" />
-                                <span>Darmowy dojazd od 150 zł</span>
+                                <span>Darmowy dojazd od 100 zł</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <CheckCircle2 size={18} className="text-blue-600 flex-shrink-0" />
