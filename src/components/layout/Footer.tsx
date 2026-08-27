@@ -14,7 +14,7 @@ export function Footer() {
                         <Link href="/" className="inline-block">
                             <span className="text-2xl font-bold text-white">Clean<span className="text-blue-500">Daw</span></span>
                         </Link>
-                        <p className="text-sm leading-relaxed max-w-xs text-slate-300">
+                        <p className="text-sm leading-relaxed max-w-xs text-slate-200">
                             Profesjonalne pranie tapicerki meblowej i samochodowej. Przywracamy blask Twoim wnętrzom na terenie Poznania, Szamotuł i całego województwa wielkopolskiego.
                         </p>
                     </div>

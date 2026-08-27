@@ -9,6 +9,7 @@ import {CookieBanner} from "@/components/ui/CookieBanner";
 const inter = Inter({
     subsets: ['latin-ext'],
     display: 'swap',
+    preload: true,
     variable: '--font-inter',
 });
 
