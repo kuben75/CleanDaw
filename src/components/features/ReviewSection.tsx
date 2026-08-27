@@ -57,7 +57,7 @@ export async function ReviewsSection() {
                             </div>
 
                             <div className="flex items-center gap-4 relative z-10 mt-auto pt-6 border-t border-slate-200">
-                                <img src={review.profile_photo_url} alt={`Zdjęcie profilowe ${review.author_name}`}
+                                <img src={review.profile_photo_url.replace('=s128', '=s64')} alt={`Zdjęcie profilowe ${review.author_name}`}
                                      className="w-10 h-10 rounded-full" loading="lazy" referrerPolicy="no-referrer"/>
                                 <div>
                                     <p className="font-semibold text-slate-900 text-sm">{review.author_name}</p>

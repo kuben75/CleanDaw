@@ -52,7 +52,7 @@ export function Footer() {
 
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-300">
                     <p>&copy; {currentYear} CleanDaw. Wszelkie prawa zastrzeżone.</p>
                     <div className="flex gap-4">
                         <Link href="/polityka-prywatnosci" className="hover:text-white transition-colors">Polityka prywatności</Link>

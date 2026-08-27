@@ -4,13 +4,13 @@ import {MetadataRoute} from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: "domena", // TODO domena
+            url: "https://www.cleandaw.pl",
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 1
         },
         {
-            url: 'https://twojadomena.pl/polityka-prywatnosci', // TODO
+            url: 'https://www.cleandaw.pl/polityka-prywatnosci',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.5,

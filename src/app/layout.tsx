@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'CleanDaw | Profesjonalne Pranie Tapicerki',
         description: 'Przywracamy blask Twoim wnętrzom. Sprawdź cennik i zarezerwuj termin!',
-        url: 'https://twojadomena.pl', // TODO wpisanie domeny
+        url: 'https://www.cleandaw.pl',
         siteName: 'CleanDaw',
         locale: 'pl_PL',
         type: 'website',
@@ -43,7 +43,7 @@ const jsonLd = {
     "@type": "LocalBusiness",
     "name": "CleanDaw",
     "description": "Profesjonalne pranie tapicerki meblowej i samochodowej. Dojazd do klienta na terenie Poznania, Szamotuł i województwa wielkopolskiego.",
-    "url": "https://twojadomena.pl", // TODO wpisanie swojej domeny
+    "url": "https://www.cleandaw.pl",
     "telephone": "+48535880525",
     "address": {
         "@type": "PostalAddress",

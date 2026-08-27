@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://twojadomena.pl/sitemap.xml', //TODO
+        sitemap: 'https://www.cleandaw.pl/sitemap.xml',
     };
 }
