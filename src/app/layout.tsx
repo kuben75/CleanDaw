@@ -6,7 +6,11 @@ import {Navbar} from "@/components/layout/Navbar";
 import {Footer} from "@/components/layout/Footer";
 import {CookieBanner} from "@/components/ui/CookieBanner";
 
-const inter = Inter({subsets: ["latin", "latin-ext"], display: "swap"});
+const inter = Inter({
+    subsets: ['latin-ext'],
+    display: 'swap',
+    variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
     title: 'CleanDaw | Pranie Tapicerki i Car Detailing Poznań',

@@ -1,15 +1,17 @@
 "use client";
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Home, Zap, Droplets, Banknote, MapPin } from 'lucide-react';
+import { Home, Zap, Droplets, Banknote, MapPin, Map as MapIcon } from 'lucide-react';
 import { Button } from '../ui/Button';
-
 
 const MapWidget = dynamic(() => import('./MapWidget'), {
     ssr: false,
-    loading: () => <div className="w-full h-[400px] bg-slate-100 animate-pulse rounded-2xl flex items-center justify-center text-slate-400">Ładowanie mapy...</div>
+    loading: () => <div className="w-full h-full bg-slate-100 animate-pulse flex items-center justify-center text-slate-400">Ładowanie mapy...</div>
 });
 
 export function DriveSection() {
+    const [isMapActive, setIsMapActive] = useState(false);
+
     return (
         <section id="dojazd" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,10 +59,25 @@ export function DriveSection() {
                         </a>
                     </div>
 
-                    <div className="h-[400px] lg:h-[600px] w-full sticky top-28">
-                        <MapWidget />
+                    <div className="h-[400px] lg:h-[600px] w-full sticky top-28 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 relative">
+                        {!isMapActive ? (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                                    <MapIcon size={32} />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Interaktywna mapa dojazdu</h3>
+                                <p className="text-slate-600 mb-8 max-w-sm">
+                                    Kliknij poniżej, aby załadować mapę i sprawdzić nasz dokładny obszar działania.
+                                </p>
+                                <Button variant="primary" onClick={() => setIsMapActive(true)}>
+                                    Załaduj mapę
+                                </Button>
+                            </div>
+                        ) : (
+                            <MapWidget />
+                        )}
 
-                        <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium text-slate-600 justify-center">
+                        <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-wrap gap-4 text-sm font-medium text-slate-700 bg-white/90 backdrop-blur-sm py-2 px-4 mx-4 rounded-xl shadow-sm justify-center border border-slate-200">
                             <div className="flex items-center gap-2">
                                 <div className="w-4 h-4 rounded bg-blue-500/30 border border-blue-600" /> Obszar standardowy
                             </div>

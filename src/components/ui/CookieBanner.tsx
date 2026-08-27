@@ -9,7 +9,6 @@ export function CookieBanner() {
     useEffect(() => {
         const timer = setTimeout(() => {
             const consent = localStorage.getItem('cleandaw_cookie_consent');
-            // Pokazujemy pasek tylko wtedy, gdy nie ma żadnej decyzji (ani true, ani false)
             if (!consent) {
                 setIsVisible(true);
             }
@@ -36,7 +35,7 @@ export function CookieBanner() {
 
                 <div className="text-sm text-slate-600 md:pr-10 text-center md:text-left">
                     Nasza strona używa plików cookies w celu prawidłowego działania oraz do celów analitycznych.
-                    Korzystając ze strony, wyrażasz zgodę na ich używanie zgodnie z naszą <a href="/polityka-prywatnosci" className="text-blue-600 hover:underline font-medium">Polityką Prywatności</a>.
+                    Korzystając ze strony, wyrażasz zgodę na ich używanie zgodnie z naszą <a href="/polityka-prywatnosci" className="text-blue-600 underline hover:text-blue-700 font-medium">Polityką Prywatności</a>.
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0 w-full md:w-auto">

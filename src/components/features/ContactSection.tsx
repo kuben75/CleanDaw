@@ -150,7 +150,7 @@ export function ContactSection() {
                                         Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na
                                         zapytanie.
                                         Szczegóły w <Link href="/polityka-prywatnosci"
-                                                          className="text-blue-600 hover:underline">Polityce
+                                                          className="text-blue-600 underline hover:text-blue-700">Polityce
                                         Prywatności</Link>.
                                     </p>
                                     {errors.rodo &&
