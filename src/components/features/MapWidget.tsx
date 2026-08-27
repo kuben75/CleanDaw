@@ -18,20 +18,21 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 export default function MapWidget() {
     return (
-        <MapContainer center={MAP_CENTER} zoom={8.5} className="w-full h-full min-h-[400px] z-0 rounded-2xl shadow-inner border border-slate-200">
+        <MapContainer center={MAP_CENTER} zoom={8.5} className="w-full h-full min-h-[400px] z-0 rounded-sm shadow-inner border border-zinc-800">
+
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+                attribution='Tiles &copy; Esri'
+                url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
             />
 
             <Polygon
                 positions={CUSTOM_ZONE_COORDS}
-                pathOptions={{ color: '#2563eb', weight: 2, fillColor: '#3b82f6', fillOpacity: 0.15 }}
+                pathOptions={{ color: '#3b82f6', weight: 2, fillColor: '#3b82f6', fillOpacity: 0.2 }}
             />
 
             <Polygon
                 positions={POZNAN_ZONE_COORDS}
-                pathOptions={{ color: '#d97706', weight: 2, fillColor: '#f59e0b', fillOpacity: 0.3 }}
+                pathOptions={{ color: '#71717a', weight: 2, fillColor: '#71717a', fillOpacity: 0.2 }}
             />
 
             <Marker position={BASE_COORD}>
@@ -39,6 +40,11 @@ export default function MapWidget() {
                     <strong>CleanDaw</strong><br />Nasza baza - Słopanowo.
                 </Popup>
             </Marker>
+
+            <TileLayer
+                url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+            />
+
         </MapContainer>
     );
 }

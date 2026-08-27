@@ -9,9 +9,6 @@ export interface IBaseItem {
 export interface IServiceItem extends IBaseItem {
     icon: ReactNode;
 }
-export interface IEquipmentItem extends IBaseItem {
-    image: string;
-}
 
 export interface IContactFormData {
     name: string;

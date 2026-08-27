@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { IGalleryData } from '@/types/gallery.types';
 import { Button } from '../ui/Button';
 import { Loader2 } from 'lucide-react';
-import {GalleryGrid} from "@/components/ui/GalleryGrid";
+import { GalleryGrid } from "@/components/ui/GalleryGrid";
 
 export function FullGalleryClient({ fullData }: Readonly<{ fullData: IGalleryData }>) {
 
@@ -31,23 +31,23 @@ export function FullGalleryClient({ fullData }: Readonly<{ fullData: IGalleryDat
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
 
             <GalleryGrid data={currentData} />
 
             {hasMore && (
-                <div className="mt-16 text-center">
+                <div className="mt-16 md:mt-24 text-center">
                     <Button
-                        variant="secondary"
+                        variant="primary"
                         onClick={handleLoadMore}
                         disabled={isLoading}
-                        className="min-w-[200px]"
+                        className="min-w-[240px] uppercase tracking-widest text-sm font-bold"
                     >
                         {isLoading ? (
-                            <span className="flex items-center justify-center gap-2">
-                <Loader2 size={18} className="animate-spin" />
-                Ładowanie...
-              </span>
+                            <span className="flex items-center justify-center gap-3">
+                                <Loader2 size={18} className="animate-spin" />
+                                Wczytywanie...
+                            </span>
                         ) : (
                             "Załaduj więcej realizacji"
                         )}
@@ -56,9 +56,12 @@ export function FullGalleryClient({ fullData }: Readonly<{ fullData: IGalleryDat
             )}
 
             {!hasMore && (
-                <p className="mt-16 text-center text-slate-500 font-medium">
-                    Wyświetlono wszystkie realizacje.
-                </p>
+                <div className="mt-16 md:mt-24 text-center relative flex justify-center items-center">
+                    <div className="absolute w-full h-px bg-zinc-800/50" />
+                    <p className="relative bg-zinc-950 px-6 text-zinc-500 text-xs font-bold uppercase tracking-widest">
+                        Wyświetlono wszystkie realizacje
+                    </p>
+                </div>
             )}
 
         </div>

@@ -9,3 +9,10 @@ export interface IGalleryData {
     projects: IGalleryProject[];
     standalone: string[];
 }
+
+export interface IProcessGalleryData {
+    id: number;
+    src: string;
+    alt: string;
+    className: string;
+}

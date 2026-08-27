@@ -1,7 +1,7 @@
 import {Hero} from "@/components/features/Hero";
 import {AboutUs} from "@/components/features/AboutUs";
 import {Services} from "@/components/features/Services";
-import {Equipment} from "@/components/features/Equipment";
+import {ProcessGallery} from "@/components/features/Equipment";
 import {DriveSection} from "@/components/features/DriveSection";
 import {ContactSection} from "@/components/features/ContactSection";
 import {ReviewsSection} from "@/components/features/ReviewSection";
@@ -18,7 +18,7 @@ export default function Home() {
             <ReviewsSection />
             <Services />
             <Pricing />
-            <Equipment />
+            <ProcessGallery />
             <DriveSection />
             <ContactSection />
             <GallerySection />

@@ -1,75 +1,90 @@
 "use client";
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Home, Zap, Droplets, Banknote, MapPin, Map as MapIcon } from 'lucide-react';
+import { Home, Zap, Droplets, Banknote, MapPin, Map as MapIcon, Route } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 const MapWidget = dynamic(() => import('./MapWidget'), {
     ssr: false,
-    loading: () => <div className="w-full h-full bg-slate-100 animate-pulse flex items-center justify-center text-slate-400">Ładowanie mapy...</div>
+    loading: () => <div className="w-full h-full bg-zinc-900 animate-pulse flex items-center justify-center text-zinc-500 uppercase tracking-widest text-sm font-bold">Ładowanie mapy...</div>
 });
 
 export function DriveSection() {
     const [isMapActive, setIsMapActive] = useState(false);
 
     return (
-        <section id="dojazd" className="py-20 bg-white">
+        <section id="dojazd" className="py-20 md:py-32 bg-zinc-950 border-t border-zinc-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Działamy w całym regionie</h2>
-                        <p className="text-lg text-slate-600 mb-8">
-                            Docieramy wszędzie tam, gdzie potrzebna jest profesjonalna czystość.
+                        <div className="flex items-center gap-2 text-blue-500 font-bold uppercase tracking-widest text-sm mb-4">
+                            <Route size={18} />
+                            <span>Zasięg działania</span>
+                        </div>
+
+                        <h2
+                            className="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-tight mb-6"
+                            style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+                        >
+                            Działamy w <span className="text-blue-500">całym regionie</span>
+                        </h2>
+
+                        <p className="text-lg text-zinc-400 mb-10">
+                            Docieramy wszędzie tam, gdzie potrzebna jest bezkompromisowa czystość.
                         </p>
 
-                        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 md:p-8 mb-8 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-2 h-full bg-amber-500" />
-                            <h3 className="text-xl font-bold text-amber-900 mb-3 flex items-center gap-2">
-                                <Home className="text-amber-600" />
+                        <div className="bg-zinc-900 border border-zinc-800 rounded-sm p-6 md:p-8 mb-10 relative overflow-hidden group hover:border-blue-500/50 transition-colors duration-300">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-blue-500" />
+
+                            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3 uppercase tracking-wide">
+                                <Home className="text-blue-500" />
                                 Strefa Mobilna: Poznań i okolice
                             </h3>
-                            <p className="text-amber-800 mb-4 leading-relaxed">
-                                Dla klientów z aglomeracji poznańskiej przygotowaliśmy usługę z dojazdem! Przyjeżdżamy, czyścimy i zostawiamy pachnące wnętrze bez odstawiania auta do Słopanowa.
+                            <p className="text-zinc-400 mb-6 leading-relaxed">
+                                Dla klientów z aglomeracji poznańskiej przygotowaliśmy usługę z dojazdem. Przyjeżdżamy, wyciągamy brud i zostawiamy pachnące wnętrze bez odstawiania auta do Słopanowa.
                             </p>
 
-                            <p className="font-semibold text-amber-900 mb-3">Wymagania dla tej strefy:</p>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3 text-amber-800">
-                                    <Zap size={18} className="text-amber-600 flex-shrink-0" /> Dostęp do prądu (do podłączenia sprzętu)
+                            <p className="font-bold text-white mb-4 uppercase tracking-wider text-sm">Wymagania dla tej strefy:</p>
+                            <ul className="space-y-4">
+                                <li className="flex items-center gap-3 text-zinc-300">
+                                    <Zap size={18} className="text-blue-500 flex-shrink-0" /> Dostęp do prądu
                                 </li>
-                                <li className="flex items-center gap-3 text-amber-800">
-                                    <Droplets size={18} className="text-amber-600 flex-shrink-0" /> Dostęp do bieżącej wody
+                                <li className="flex items-center gap-3 text-zinc-300">
+                                    <Droplets size={18} className="text-blue-500 flex-shrink-0" /> Dostęp do bieżącej wody
                                 </li>
-                                <li className="flex items-center gap-3 text-amber-800">
-                                    <Banknote size={18} className="text-amber-600 flex-shrink-0" /> Usługa realizowana dla zamówień od 100 zł
+                                <li className="flex items-center gap-3 text-zinc-300">
+                                    <Banknote size={18} className="text-blue-500 flex-shrink-0" /> Minimalna kwota zamówienia: 100 zł
                                 </li>
                             </ul>
                         </div>
 
-                        <p className="text-slate-600 mb-8 italic">
+                        <p className="text-zinc-500 mb-8 italic text-sm">
                             Docieramy do wszystkich, nawet najmniejszych miejscowości w obrębie obszaru zaznaczonego na mapie obok.
                         </p>
 
                         <a href="#kontakt">
-                            <Button className="w-full sm:w-auto gap-2">
-                                <MapPin size={18} />
+                            <Button variant="primary" className="w-full sm:w-auto gap-3 group">
+                                <MapPin size={20} className="group-hover:animate-bounce" />
                                 Sprawdź, czy do Ciebie dojedziemy
                             </Button>
                         </a>
                     </div>
 
-                    <div className="h-[400px] lg:h-[600px] w-full sticky top-28 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 relative">
+                    <div className="h-[450px] lg:h-[650px] w-full sticky top-28 rounded-sm overflow-hidden border border-zinc-800 bg-zinc-900 relative shadow-2xl bg-zinc-900">
                         {!isMapActive ? (
-                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
-                                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 bg-zinc-900 backdrop-blur-sm">
+
+                                <div className="w-16 h-16 bg-blue-500/10 border border-blue-500/20 text-blue-500 rounded-sm flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
                                     <MapIcon size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">Interaktywna mapa dojazdu</h3>
-                                <p className="text-slate-600 mb-8 max-w-sm">
+                                <h3 className="text-2xl font-bold text-white mb-3 uppercase tracking-wide">
+                                    Interaktywna mapa dojazdu
+                                </h3>
+                                <p className="text-zinc-400 mb-8 max-w-sm">
                                     Kliknij poniżej, aby załadować mapę i sprawdzić nasz dokładny obszar działania.
                                 </p>
-                                <Button variant="primary" onClick={() => setIsMapActive(true)}>
+                                <Button variant="primary" onClick={() => setIsMapActive(true)} className="px-8">
                                     Załaduj mapę
                                 </Button>
                             </div>
@@ -77,12 +92,12 @@ export function DriveSection() {
                             <MapWidget />
                         )}
 
-                        <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-wrap gap-4 text-sm font-medium text-slate-700 bg-white/90 backdrop-blur-sm py-2 px-4 mx-4 rounded-xl shadow-sm justify-center border border-slate-200">
+                        <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-wrap gap-6 text-xs font-bold uppercase tracking-wider text-zinc-300 bg-zinc-950/90 backdrop-blur-md py-3 px-6 mx-4 rounded-sm shadow-xl justify-center border border-zinc-800">
                             <div className="flex items-center gap-2">
-                                <div className="w-4 h-4 rounded bg-blue-500/30 border border-blue-600" /> Obszar standardowy
+                                <div className="w-4 h-4 rounded-sm bg-blue-500/30 border border-blue-500" /> Obszar standardowy
                             </div>
                             <div className="flex items-center gap-2">
-                                <div className="w-4 h-4 rounded bg-amber-500/40 border border-amber-600" /> Strefa mobilna
+                                <div className="w-4 h-4 rounded-sm bg-zinc-500/30 border border-zinc-500" /> Strefa mobilna
                             </div>
                         </div>
                     </div>

@@ -66,7 +66,7 @@ export function Hero() {
                                 Zobacz nasze realizacje
                             </Button>
                         </a>
-                        <a href="#uslugi">
+                        <a href="#cennik">
                             <Button variant="secondary" className="w-full sm:w-auto">
                                 Cennik usług
                             </Button>

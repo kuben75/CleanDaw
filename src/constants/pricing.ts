@@ -2,23 +2,6 @@ import {IPricingCategory} from "@/types/pricing.types";
 
 export const PRICING_DATA: IPricingCategory[] = [
     {
-        id: 'meble',
-        label: 'Tapicerka Meblowa',
-        items: [
-            { name: 'Sofa (2-3 osobowa)', price: 'od 150 zł' },
-            { name: 'Narożnik (do 4 osób)', price: 'od 180 zł' },
-            { name: 'Narożnik (5-6 osób)', price: 'od 200 zł' },
-            { name: 'Narożnik (7+ osób)', price: 'od 250 zł' },
-            { name: 'Fotel', price: 'od 40 zł' },
-            { name: 'Krzesło / Taboret', price: 'od 15 zł' },
-            { name: 'Fotel biurowy', price: 'od 15 zł' },
-            { name: 'Materac pojedynczy', price: 'od 60 / 120 zł', description: 'Cena za jedną stronę / dwie strony' },
-            { name: 'Materac podwójny', price: 'od 120 / 220 zł', description: 'Cena za jedną stronę / dwie strony' },
-            { name: 'Wózek dziecięcy / Spacerówka', price: 'od 50 zł' },
-            { name: 'Pojedynczy fotel samochodowy', price: 'od 35 zł', description: 'Pranie samego fotela poza głównymi pakietami' },
-        ]
-    },
-    {
         id: 'auto',
         label: 'Auto Detailing',
         items: [
@@ -46,6 +29,23 @@ export const PRICING_DATA: IPricingCategory[] = [
                     'Zabezpieczenie plastików (dedykowany dressing)'
                 ]
             }
+        ]
+    },
+    {
+        id: 'meble',
+        label: 'Tapicerka Meblowa',
+        items: [
+            { name: 'Sofa (2-3 osobowa)', price: 'od 150 zł' },
+            { name: 'Narożnik (do 4 osób)', price: 'od 180 zł' },
+            { name: 'Narożnik (5-6 osób)', price: 'od 200 zł' },
+            { name: 'Narożnik (7+ osób)', price: 'od 250 zł' },
+            { name: 'Fotel', price: 'od 40 zł' },
+            { name: 'Krzesło / Taboret', price: 'od 15 zł' },
+            { name: 'Fotel biurowy', price: 'od 15 zł' },
+            { name: 'Materac pojedynczy', price: 'od 60 / 120 zł', description: 'Cena za jedną stronę / dwie strony' },
+            { name: 'Materac podwójny', price: 'od 120 / 220 zł', description: 'Cena za jedną stronę / dwie strony' },
+            { name: 'Wózek dziecięcy / Spacerówka', price: 'od 50 zł' },
+            { name: 'Pojedynczy fotel samochodowy', price: 'od 35 zł', description: 'Pranie samego fotela poza głównymi pakietami' },
         ]
     }
 ];

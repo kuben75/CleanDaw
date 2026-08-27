@@ -2,105 +2,104 @@
 
 import { useState } from 'react';
 import { PRICING_DATA } from '@/constants/pricing';
-import { CheckCircle2 } from 'lucide-react';
+import { Tag, Check } from 'lucide-react';
 
 export function Pricing() {
     const [activeTab, setActiveTab] = useState<string>(PRICING_DATA[0].id);
 
     const activeCategory = PRICING_DATA.find(category => category.id === activeTab);
 
-    return (
-        <section id="cennik" className="py-20 md:py-32 bg-slate-50">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Cennik</h2>
-                    <p className="text-lg text-slate-600">
-                        Wybierz kategorię, aby sprawdzić orientacyjne koszty. Ostateczna wycena zależy od stopnia zabrudzenia.
+    const isTwoItems = activeCategory?.items.length === 2;
+    const gridLayoutClass = isTwoItems
+        ? "lg:grid-cols-2 lg:max-w-4xl lg:mx-auto"
+        : "lg:grid-cols-3";
+
+    return (
+        <section id="cennik" className="py-20 md:py-32 bg-zinc-950 border-t border-zinc-900">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div className="text-center mb-12 flex flex-col items-center">
+                    <div className="flex items-center gap-2 text-blue-500 font-bold uppercase tracking-widest text-sm mb-4">
+                        <Tag size={18} />
+                        <span>Przejrzysta oferta</span>
+                    </div>
+
+                    <h2
+                        className="text-4xl md:text-5xl font-extrabold text-white mb-6 uppercase tracking-tight"
+                        style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+                    >
+                        Nasz <span className="text-blue-500">Cennik</span>
+                    </h2>
+                    <p className="text-lg text-zinc-400 max-w-2xl">
+                        Wybierz kategorię, aby sprawdzić koszty. Ostateczna wycena zawsze zależy od stopnia zabrudzenia i wielkości zlecenia.
                     </p>
                 </div>
 
-                <div className="flex justify-center mb-10">
-                    <div className="inline-flex bg-slate-200/60 p-1 rounded-xl">
-                        {PRICING_DATA.map((category) => (
-                            <button
-                                key={category.id}
-                                onClick={() => setActiveTab(category.id)}
-                                className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                                    activeTab === category.id
-                                        ? 'bg-white text-blue-600 shadow-sm'
-                                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50'
-                                }`}
-                            >
-                                {category.label}
-                            </button>
-                        ))}
-                    </div>
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                    {PRICING_DATA.map((category) => (
+                        <button
+                            key={category.id}
+                            onClick={() => setActiveTab(category.id)}
+                            className={`px-6 py-3 rounded-sm text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
+                                activeTab === category.id
+                                    ? 'bg-blue-600 border-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.3)]'
+                                    : 'bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-600'
+                            }`}
+                        >
+                            {category.label}
+                        </button>
+                    ))}
                 </div>
 
-                <div
-                    className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
-                    <ul className="divide-y divide-slate-100">
-                        {activeCategory?.items.map((item, index) => (
-                            <li
-                                key={index}
-                                className={`p-6 sm:px-8 hover:bg-slate-50 transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-4 ${
-                                    item.isBestChoice ? 'bg-blue-50/30' : ''
-                                }`}
-                            >
-                                <div className="flex items-start gap-3 w-full">
-                                    <CheckCircle2
-                                        className={`flex-shrink-0 mt-0.5 ${item.isBestChoice ? 'text-amber-500' : 'text-blue-500'}`}
-                                        size={20}/>
-                                    <div className="w-full">
-
-                                        <div className="flex flex-wrap items-center gap-3 mb-1">
-                                            <h3 className="text-slate-900 font-semibold text-lg">{item.name}</h3>
-                                            {item.isBestChoice && (
-                                                <span
-                                                    className="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider">
-                          Najlepszy Wybór
-                        </span>
-                                            )}
-                                        </div>
-
-                                        {item.description && (
-                                            <p className="text-slate-600 text-sm font-medium mb-3">{item.description}</p>
-                                        )}
-
-                                        {item.features && (
-                                            <ul className="mt-3 space-y-2">
-                                                {item.features.map((feature, idx) => (
-                                                    <li key={idx}
-                                                        className="flex items-center gap-2 text-slate-600 text-sm">
-                                                        <div
-                                                            className="w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"/>
-                                                        {feature}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
+                <div key={activeTab} className={`grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in duration-500 ${gridLayoutClass}`}>
+                    {activeCategory?.items.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`flex flex-col bg-zinc-900 border ${
+                                item.isBestChoice ? 'border-blue-500' : 'border-zinc-800 hover:border-zinc-700'
+                            } rounded-sm p-6 sm:p-8 transition-all duration-300 relative overflow-hidden`}
+                        >
+                            {item.isBestChoice && (
+                                <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-bl-sm">
+                                    Polecany pakiet
                                 </div>
+                            )}
 
-                                <div className="sm:text-right flex-shrink-0 mt-4 sm:mt-0">
-                  <span className={`inline-block px-4 py-2 font-bold rounded-lg border ${
-                      item.isBestChoice
-                          ? 'bg-amber-50 text-amber-700 border-amber-200 shadow-sm'
-                          : 'bg-blue-50 text-blue-700 border-blue-100'
-                  }`}>
-                    {item.price}
-                  </span>
+                            <div className="mb-4">
+                                <h3 className="text-white font-bold tracking-wide uppercase text-xl sm:text-2xl mb-2 pr-12">
+                                    {item.name}
+                                </h3>
+                                <div
+                                    className="text-3xl text-blue-500 font-bold tracking-tight"
+                                    style={{ fontFamily: 'var(--font-oswald)' }}
+                                >
+                                    {item.price}
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
+                            </div>
+
+                            {item.description && (
+                                <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                                    {item.description}
+                                </p>
+                            )}
+
+                            {item.features && item.features.length > 0 && (
+                                <ul className="space-y-3 border-t border-zinc-800/50 pt-6 mt-auto">
+                                    {item.features.map((feature, idx) => (
+                                        <li key={idx} className="flex items-start gap-3">
+                                            <Check size={16} className="text-blue-500 flex-shrink-0 mt-0.5" />
+                                            <span className="text-zinc-300 text-sm">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    ))}
                 </div>
 
-                <div className="mt-8 text-center text-sm text-slate-500">
-                    * Powyższe ceny mają charakter poglądowy i nie stanowią oferty handlowej w rozumieniu kodeksu
-                    cywilnego.
-                    Dojazd do klienta od 100 zł jest wliczony w cenę (Strefa Słopanowo/Poznań).
+                <div className="mt-12 text-center text-xs text-zinc-600 font-medium tracking-wide uppercase">
+                    * Powyższe ceny mają charakter poglądowy. Dojazd od 100 zł (Strefa Słopanowo/Poznań).
                 </div>
 
             </div>
