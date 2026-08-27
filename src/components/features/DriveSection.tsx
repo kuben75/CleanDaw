@@ -42,7 +42,7 @@ export function DriveSection() {
                                     <Droplets size={18} className="text-amber-600 flex-shrink-0" /> Dostęp do bieżącej wody
                                 </li>
                                 <li className="flex items-center gap-3 text-amber-800">
-                                    <Banknote size={18} className="text-amber-600 flex-shrink-0" /> Usługa realizowana dla zamówień od 150 zł
+                                    <Banknote size={18} className="text-amber-600 flex-shrink-0" /> Usługa realizowana dla zamówień od 100 zł
                                 </li>
                             </ul>
                         </div>

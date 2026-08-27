@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import {Navbar} from "@/components/layout/Navbar";
@@ -11,6 +11,13 @@ const inter = Inter({
     display: 'swap',
     preload: true,
     variable: '--font-inter',
+});
+
+const oswald = Oswald({
+    subsets: ['latin-ext'],
+    display: 'swap',
+    preload: true,
+    variable: '--font-oswald',
 });
 
 export const metadata: Metadata = {
@@ -62,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="pl" className="scroll-smooth">
-      <body className={`${inter.className} antialiased bg-slate-50 text-slate-900`}>
+      <body className={`${inter.variable} ${oswald.variable} antialiased bg-slate-50 text-slate-900`}>
       <Navbar />
       <div className="pt-20">
           {children}
