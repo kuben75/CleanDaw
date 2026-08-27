@@ -71,7 +71,7 @@ export default function RootLayout({
       <html lang="pl" className="scroll-smooth">
       <body className={`${inter.variable} ${oswald.variable} antialiased bg-slate-50 text-slate-900`}>
       <Navbar />
-      <div className="pt-20">
+      <div className="w-full">
           {children}
       </div>
      <Footer />

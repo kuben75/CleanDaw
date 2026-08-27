@@ -13,7 +13,7 @@ export function Navbar() {
     const closeMenu = () => setIsMobileMenuOpen(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-800 transition-all duration-300">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/60 backdrop-blur-md border-b border-zinc-800 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20 md:h-24">
 
@@ -60,7 +60,7 @@ export function Navbar() {
             </div>
 
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-zinc-950 border-t border-zinc-800 absolute w-full">
+                <div className="md:hidden bg-zinc-950 border-t border-zinc-800 absolute w-full min-h-[100svh]">
                     <div className="px-4 pt-4 pb-6 space-y-2 shadow-2xl">
                         {NAV_LINKS.map((link) => (
                             <Link
