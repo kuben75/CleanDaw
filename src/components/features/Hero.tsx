@@ -23,7 +23,7 @@ export function Hero() {
 
                         <p className="text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
                             Profesjonalny detailing wnętrz samochodowych oraz pranie tapicerki meblowej.
-                            Mobilnie z dojazdem oraz stacjonarnie w Słopanowie.
+                            Mobilnie z dojazdem oraz stacjonarnie.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-sm text-slate-700 font-medium">
@@ -46,10 +46,10 @@ export function Hero() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="#kontakt">
+                            <a href="#galeria">
                                 <Button variant="primary" className="w-full sm:w-auto gap-2 text-base">
                                     <CalendarCheck size={18} />
-                                    Darmowa wycena online
+                                    Zobacz zdjęcia naszych realizacji
                                 </Button>
                             </a>
                             <a href="#uslugi">
