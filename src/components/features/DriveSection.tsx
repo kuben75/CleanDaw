@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Home, Zap, Droplets, Banknote, MapPin, Map as MapIcon, Route } from 'lucide-react';
+import {Home, Zap, Droplets, Banknote, MapPin, Map as MapIcon, Route, Phone} from 'lucide-react';
 import { Button } from '../ui/Button';
 
 const MapWidget = dynamic(() => import('./MapWidget'), {
@@ -30,9 +30,6 @@ export function DriveSection() {
                             Działamy w <span className="text-blue-500">całym regionie</span>
                         </h2>
 
-                        <p className="text-lg text-zinc-400 mb-10">
-                            Docieramy wszędzie tam, gdzie potrzebna jest bezkompromisowa czystość.
-                        </p>
 
                         <div className="bg-zinc-900 border border-zinc-800 rounded-sm p-6 md:p-8 mb-10 relative overflow-hidden group hover:border-blue-500/50 transition-colors duration-300">
                             <div className="absolute top-0 left-0 w-1 h-full bg-blue-500" />
@@ -63,12 +60,15 @@ export function DriveSection() {
                             Docieramy do wszystkich, nawet najmniejszych miejscowości w obrębie obszaru zaznaczonego na mapie obok.
                         </p>
 
-                        <a href="#kontakt">
-                            <Button variant="primary" className="w-full sm:w-auto gap-3 group">
-                                <MapPin size={20} className="group-hover:animate-bounce" />
-                                Sprawdź, czy do Ciebie dojedziemy
-                            </Button>
-                        </a>
+                        <div className="flex flex-col sm:flex-row items-center gap-4">
+                            <a href="tel:+48535880525" className="w-full sm:w-auto">
+                                <Button variant="primary" className="w-full sm:w-auto gap-3 group">
+                                    <Phone size={20} className="group-hover:animate-pulse" />
+                                    Zadzwoń i zapytaj o dojazd
+                                </Button>
+                            </a>
+                            <span className="text-zinc-500 text-sm font-bold uppercase tracking-widest hidden sm:block">lub sprawdź mapę obok</span>
+                        </div>
                     </div>
 
                     <div className="h-[450px] lg:h-[650px] w-full sticky top-28 rounded-sm overflow-hidden border border-zinc-800 bg-zinc-900 relative shadow-2xl bg-zinc-900">
@@ -92,6 +92,7 @@ export function DriveSection() {
                             <MapWidget />
                         )}
 
+                        {isMapActive && (
                         <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-wrap gap-6 text-xs font-bold uppercase tracking-wider text-zinc-300 bg-zinc-950/90 backdrop-blur-md py-3 px-6 mx-4 rounded-sm shadow-xl justify-center border border-zinc-800">
                             <div className="flex items-center gap-2">
                                 <div className="w-4 h-4 rounded-sm bg-blue-500/30 border border-blue-500" /> Obszar standardowy
@@ -100,6 +101,7 @@ export function DriveSection() {
                                 <div className="w-4 h-4 rounded-sm bg-zinc-500/30 border border-zinc-500" /> Strefa mobilna
                             </div>
                         </div>
+                            )};
                     </div>
                 </div>
 

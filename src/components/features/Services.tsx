@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
 import { SERVICES_DATA } from '@/constants/services';
@@ -27,9 +27,6 @@ export function Services() {
                     >
                         Czym się <span className="text-blue-500">zajmujemy?</span>
                     </h2>
-                    <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-                        Specjalizujemy się w radykalnym czyszczeniu ekstrakcyjnym. Wyciągamy brud, usuwamy plamy i odmieniamy wygląd Twoich mebli oraz wnętrza samochodu.
-                    </p>
                 </div>
 
                 <div className="space-y-4">

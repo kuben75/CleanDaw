@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { Sparkles, CalendarCheck, CheckCircle2 } from "lucide-react";
+import { CalendarCheck, CheckCircle2, Crosshair } from "lucide-react";
 
 export function Hero() {
     return (
@@ -23,35 +23,34 @@ export function Hero() {
 
                     <div
                         className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border-l-2 border-blue-500 text-blue-400 font-bold tracking-wider uppercase text-xs mb-8 w-fit">
-                        <Sparkles size={16}/>
-                        <span>Detailing i pranie tapicerek • Wielkopolska</span>
+                        <Crosshair size={16}/>
+                        <span>Bezkompromisowy detailing • Wielkopolska</span>
                     </div>
 
                     <h1
                         className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6 uppercase"
                         style={{fontFamily: 'var(--font-oswald), sans-serif'}}
                     >
-                        Przywróć fabryczny blask <br/>
-                        <span className="text-blue-500">swojej tapicerce.</span>
+                        Usuwamy lata zaniedbań. <br/>
+                        <span className="text-blue-500">Fabryczny stan tapicerki.</span>
                     </h1>
 
                     <p className="text-lg sm:text-xl text-zinc-300 mb-10 max-w-xl leading-relaxed">
-                        Zabójczo skuteczny detailing wnętrz oraz pranie tapicerki.
-                        Wciągamy brud, usuwamy plamy i przywracamy świeżość. Mobilnie lub stacjonarnie.
+                        Żadnego maskowania plam i tanich zapachów. Przeprowadzamy dogłębną ekstrakcję, która wyciąga najgorszy brud z głębi materiału. Działamy z dojazdem lub w naszej bazie.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 text-sm text-zinc-200 font-medium">
                         <div className="flex items-center gap-3">
                             <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0"/>
-                            <span className="uppercase tracking-wide">Certyfikowana chemia</span>
+                            <span className="uppercase tracking-wide">Sprawdzona chemia detalingowa</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0"/>
-                            <span className="uppercase tracking-wide">Szybkie schnięcie (Dry Pod)</span>
+                            <span className="uppercase tracking-wide">Skuteczne odplamianie</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0"/>
-                            <span className="uppercase tracking-wide">Dojazd od 100 zł</span>
+                            <span className="uppercase tracking-wide">Dojazd (min. zamówienie 100 zł)</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0"/>
