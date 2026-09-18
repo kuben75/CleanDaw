@@ -5,7 +5,7 @@ import { CalendarCheck, CheckCircle2 } from "lucide-react";
 export function Hero() {
     return (
         <section id="hero"
-                 className="relative w-full min-h-[100svh] flex items-center overflow-hidden bg-zinc-950 pt-20 md:pt-24 pb-0 sm:pb-4">
+                 className="relative w-full min-h-svh flex items-center overflow-hidden bg-zinc-950 pt-20 md:pt-24 pb-0 sm:pb-4">
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/img/car.jpg"

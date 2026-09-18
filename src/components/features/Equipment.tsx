@@ -40,7 +40,7 @@ export function ProcessGallery() {
 
                 <div
                     className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px] grid-flow-dense">
-                    {WORK_IMAGES.map((img, index) => (
+                    {WORK_IMAGES.slice(0, 8).map((img, index) => (
                         <div key={img.id} onClick={() => openLightbox(imageUrls, index)} className={`relative rounded-sm overflow-hidden group border border-zinc-800 hover:border-blue-500 transition-colors duration-500 bg-zinc-950 cursor-pointer ${img.className}`}
                         >
                             <Image

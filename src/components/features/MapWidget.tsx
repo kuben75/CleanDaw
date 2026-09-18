@@ -1,7 +1,6 @@
 "use client";
 
 import { MapContainer, TileLayer, Polygon, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { MAP_CENTER, BASE_COORD, CUSTOM_ZONE_COORDS, POZNAN_ZONE_COORDS } from '@/constants/map';
 
@@ -19,6 +18,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 export default function MapWidget() {
     return (
         <MapContainer center={MAP_CENTER} zoom={8.5} className="w-full h-full min-h-[400px] z-0 rounded-sm shadow-inner border border-zinc-800">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
             <TileLayer
                 attribution='Tiles &copy; Esri'

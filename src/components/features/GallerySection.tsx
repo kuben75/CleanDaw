@@ -8,8 +8,8 @@ export async function GallerySection() {
     const galleryData = getGalleryData();
 
     const previewData = {
-        projects: galleryData.projects.slice(0, 2),
-        standalone: galleryData.standalone.slice(0, 4)
+        projects: galleryData.projects.slice(0, 1),
+        standalone: galleryData.standalone.slice(0, 3)
     };
 
     return (
@@ -48,7 +48,7 @@ export async function GallerySection() {
                         </div>
                     </>
                 ) : (
-                    <p className="text-center text-zinc-500 bg-zinc-950 border border-zinc-800 p-8 rounded-sm">
+                    <p className="text-center text-zinc-400 bg-zinc-950 border border-zinc-800 p-8 rounded-sm">
                         Brak zdjęć do wyświetlenia.
                     </p>
                 )}

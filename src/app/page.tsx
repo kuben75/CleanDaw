@@ -1,14 +1,16 @@
-import {Hero} from "@/components/features/Hero";
-import {AboutUs} from "@/components/features/AboutUs";
-import {Services} from "@/components/features/Services";
-import {ProcessGallery} from "@/components/features/Equipment";
-import {DriveSection} from "@/components/features/DriveSection";
-import {ContactSection} from "@/components/features/ContactSection";
-import {ReviewsSection} from "@/components/features/ReviewSection";
-import {Pricing} from "@/components/features/Pricing";
-import {GallerySection} from "@/components/features/GallerySection";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import dynamic from 'next/dynamic';
+import { Hero } from "@/components/features/Hero";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+const AboutUs = dynamic(() => import('@/components/features/AboutUs').then(mod => mod.AboutUs));
+const ReviewsSection = dynamic(() => import('@/components/features/ReviewSection').then(mod => mod.ReviewsSection));
+const Services = dynamic(() => import('@/components/features/Services').then(mod => mod.Services));
+const Pricing = dynamic(() => import('@/components/features/Pricing').then(mod => mod.Pricing));
+const ProcessGallery = dynamic(() => import('@/components/features/Equipment').then(mod => mod.ProcessGallery));
+const DriveSection = dynamic(() => import('@/components/features/DriveSection').then(mod => mod.DriveSection));
+const ContactSection = dynamic(() => import('@/components/features/ContactSection').then(mod => mod.ContactSection));
+const GallerySection = dynamic(() => import('@/components/features/GallerySection').then(mod => mod.GallerySection));
 
 export default function Home() {
     return (

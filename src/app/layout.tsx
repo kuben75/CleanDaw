@@ -62,21 +62,17 @@ const jsonLd = {
     "priceRange": "$$"
 };
 
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-      <html lang="pl" className="scroll-smooth">
-      <body className={`${inter.variable} ${oswald.variable} antialiased bg-slate-50 text-slate-900`}>
-      <Navbar />
-      <div className="w-full">
-          {children}
-      </div>
-     <Footer />
-      <CookieBanner />
-      </body>
-      </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+    return (
+        <html lang="pl" className="scroll-smooth">
+        <body className={`${inter.variable} ${oswald.variable} antialiased bg-zinc-950 text-zinc-300`}>
+        <Navbar />
+        <div className="w-full">
+            {children}
+        </div>
+        <Footer />
+        <CookieBanner />
+        </body>
+        </html>
+    );
 }
