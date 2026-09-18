@@ -25,8 +25,9 @@ export function Footer() {
                             />
                         </Link>
                         <p className="text-sm leading-relaxed max-w-xs text-zinc-200">
-                            Profesjonalne, ekstrakcyjne pranie tapicerki. Bezkompromisowo wyciągamy brud z mebli i samochodów na terenie Wielkopolski.
+                            Profesjonalne, ekstrakcyjne pranie tapicerki. Wyciągamy brud z samochodów oraz tapicerki meblowej na terenie Wielkopolski.
                         </p>
+
                     </div>
 
                     <div>
