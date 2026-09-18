@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { CalendarCheck, CheckCircle2, Crosshair } from "lucide-react";
+import { CalendarCheck, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
     return (
         <section id="hero"
-                 className="relative w-full min-h-[100svh] flex items-center overflow-hidden bg-zinc-950 pt-20 md:pt-24">
+                 className="relative w-full min-h-[100svh] flex items-center overflow-hidden bg-zinc-950 pt-20 md:pt-24 pb-0 sm:pb-4">
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/img/car.jpg"
@@ -23,8 +23,7 @@ export function Hero() {
 
                     <div
                         className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border-l-2 border-blue-500 text-blue-400 font-bold tracking-wider uppercase text-xs mb-8 w-fit">
-                        <Crosshair size={16}/>
-                        <span>Bezkompromisowy detailing • Wielkopolska</span>
+                        <span> Autodetailing • Wielkopolska</span>
                     </div>
 
                     <h1
