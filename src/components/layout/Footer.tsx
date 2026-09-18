@@ -7,7 +7,7 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-zinc-950 text-zinc-400 py-12 md:py-16 border-t border-zinc-900 relative overflow-hidden">
+        <footer className="bg-zinc-950 text-zinc-300 py-12 md:py-16 border-t border-zinc-900 relative overflow-hidden">
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[30rem] h-[30rem] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -24,7 +24,7 @@ export function Footer() {
                                 className="object-contain"
                             />
                         </Link>
-                        <p className="text-sm leading-relaxed max-w-xs text-zinc-500">
+                        <p className="text-sm leading-relaxed max-w-xs text-zinc-300">
                             Profesjonalne, ekstrakcyjne pranie tapicerki. Bezkompromisowo wyciągamy brud z mebli i samochodów na terenie Wielkopolski.
                         </p>
                     </div>
@@ -34,7 +34,7 @@ export function Footer() {
                         <ul className="space-y-4">
                             {NAV_LINKS.map((link) => (
                                 <li key={link.label}>
-                                    <Link href={link.href} className="group flex items-center text-zinc-400 hover:text-blue-500 transition-colors text-sm font-medium">
+                                    <Link href={link.href} className="group flex items-center text-zinc-300 hover:text-blue-500 transition-colors text-sm font-medium">
                                         <ChevronRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-blue-500 mr-2" />
                                         <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                                     </Link>
@@ -50,9 +50,9 @@ export function Footer() {
                                 <div className="p-2 bg-zinc-900 rounded-sm border border-zinc-800 group-hover:border-blue-500/50 transition-colors mt-0.5">
                                     <MapPin size={16} className="text-blue-500 flex-shrink-0" />
                                 </div>
-                                <span className="text-zinc-400 mt-1 font-medium">
+                                <span className="text-zinc-300 mt-1 font-medium">
                                     Słopanowo / Poznań<br/>
-                                    <span className="text-zinc-600 text-xs tracking-wide">Dojazd lub usługa u nas</span>
+                                    <span className="text-zinc-400 text-xs tracking-wide">Dojazd lub usługa u nas</span>
                                 </span>
                             </li>
                             <li className="flex items-center gap-4 text-sm group">

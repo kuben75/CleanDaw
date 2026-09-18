@@ -12,6 +12,8 @@ export function Hero() {
                     alt="Wyczyszczone, luksusowe wnętrze samochodu BMW po detailingu"
                     fill
                     priority
+                    fetchPriority="high"
+                    quality={60}
                     className="object-cover object-center"
                     sizes="100vw"
                 />

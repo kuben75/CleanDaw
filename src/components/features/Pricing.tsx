@@ -98,7 +98,7 @@ export function Pricing() {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center text-xs text-zinc-600 font-medium tracking-wide uppercase">
+                <div className="mt-12 text-center text-xs text-zinc-400 font-medium tracking-wide uppercase">
                     * Powyższe ceny mają charakter poglądowy. Dojazd od 100 zł (Strefa Słopanowo/Poznań).
                 </div>
 

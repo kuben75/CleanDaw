@@ -81,7 +81,7 @@ export function ContactSection() {
                                         <Phone size={24} className="text-zinc-400 group-hover/item:text-blue-500 transition-colors" />
                                     </div>
                                     <div>
-                                        <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-1">Zadzwoń do nas</p>
+                                        <p className="text-zinc-300 text-xs font-bold uppercase tracking-widest mb-1">Zadzwoń do nas</p>
                                         <p className="text-xl font-bold tracking-wide">535 880 525</p>
                                     </div>
                                 </a>
@@ -91,7 +91,7 @@ export function ContactSection() {
                                         <MessageSquare size={24} className="text-zinc-400 group-hover/item:text-green-500 transition-colors" />
                                     </div>
                                     <div>
-                                        <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-1">Napisz na WhatsApp</p>
+                                        <p className="text-zinc-300 text-xs font-bold uppercase tracking-widest mb-1">Napisz na WhatsApp</p>
                                         <p className="text-xl font-bold tracking-wide">Szybki kontakt</p>
                                     </div>
                                 </a>
@@ -101,7 +101,7 @@ export function ContactSection() {
                                         <Mail size={24} className="text-zinc-400 group-hover/item:text-blue-500 transition-colors" />
                                     </div>
                                     <div>
-                                        <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-1">Wyślij e-mail</p>
+                                        <p className="text-zinc-300 text-xs font-bold uppercase tracking-widest mb-1">Wyślij e-mail</p>
                                         <p className="text-lg font-bold tracking-wide break-all">kontakt.cleandaw@gmail.com</p>
                                     </div>
                                 </a>
@@ -177,7 +177,7 @@ export function ContactSection() {
                                     <label htmlFor="rodo" className="font-bold text-zinc-300 cursor-pointer text-xs uppercase tracking-wide">
                                         Zgoda na przetwarzanie danych
                                     </label>
-                                    <p className="text-zinc-500 mt-1 text-xs leading-relaxed">
+                                    <p className="text-zinc-300 mt-1 text-xs leading-relaxed">
                                         Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie. Szczegóły w <Link href="/polityka-prywatnosci" className="text-blue-500 underline hover:text-blue-400 transition-colors">Polityce Prywatności</Link>.
                                     </p>
                                     {errors.rodo && <p className="mt-2 text-xs font-bold text-red-500 flex items-center gap-1"><AlertCircle size={14}/> {errors.rodo.message}</p>}

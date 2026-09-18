@@ -6,7 +6,7 @@ import { Button } from '../ui/Button';
 
 const MapWidget = dynamic(() => import('./MapWidget'), {
     ssr: false,
-    loading: () => <div className="w-full h-full bg-zinc-900 animate-pulse flex items-center justify-center text-zinc-500 uppercase tracking-widest text-sm font-bold">Ładowanie mapy...</div>
+    loading: () => <div className="w-full h-full bg-zinc-900 animate-pulse flex items-center justify-center text-zinc-300 uppercase tracking-widest text-sm font-bold">Ładowanie mapy...</div>
 });
 
 export function DriveSection() {
@@ -56,7 +56,7 @@ export function DriveSection() {
                             </ul>
                         </div>
 
-                        <p className="text-zinc-500 mb-8 italic text-sm">
+                        <p className="text-zinc-300 mb-8 italic text-sm">
                             Docieramy do wszystkich, nawet najmniejszych miejscowości w obrębie obszaru zaznaczonego na mapie obok.
                         </p>
 
@@ -67,7 +67,7 @@ export function DriveSection() {
                                     Zadzwoń i zapytaj o dojazd
                                 </Button>
                             </a>
-                            <span className="text-zinc-500 text-sm font-bold uppercase tracking-widest hidden sm:block">lub sprawdź mapę obok</span>
+                            <span className="text-zinc-300 text-sm font-bold uppercase tracking-widest hidden sm:block">lub sprawdź mapę obok</span>
                         </div>
                     </div>
 
