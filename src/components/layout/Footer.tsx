@@ -24,7 +24,7 @@ export function Footer() {
                                 className="object-contain"
                             />
                         </Link>
-                        <p className="text-sm leading-relaxed max-w-xs text-zinc-300">
+                        <p className="text-sm leading-relaxed max-w-xs text-zinc-200">
                             Profesjonalne, ekstrakcyjne pranie tapicerki. Bezkompromisowo wyciągamy brud z mebli i samochodów na terenie Wielkopolski.
                         </p>
                     </div>
@@ -72,10 +72,10 @@ export function Footer() {
 
                 </div>
 
-                <div className="mt-16 pt-8 border-t border-zinc-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-widest text-zinc-600">
+                <div className="mt-16 pt-8 border-t border-zinc-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-widest text-zinc-300">
                     <p>&copy; {currentYear} CleanDaw. Wszelkie prawa zastrzeżone.</p>
                     <div className="flex gap-6">
-                        <Link href="/polityka-prywatnosci" className="hover:text-blue-500 transition-colors">Polityka prywatności</Link>
+                        <Link href="/polityka-prywatnosci" className="hover:text-blue-400 transition-colors">Polityka prywatności</Link>
                     </div>
                 </div>
             </div>

@@ -59,8 +59,6 @@ export function Navbar() {
                 </div>
             </div>
 
-            {/* ZOPTYMALIZOWANA ANIMACJA GPU */}
-            {/* Element jest zawsze w DOM, ale ukrywamy go za pomocą opacity i pointer-events, co pozwala na sprzętową akcelerację animacji */}
             <div
                 className={`md:hidden absolute w-full min-h-[100svh] bg-zinc-950 border-t border-zinc-800 transition-all duration-300 ease-in-out origin-top ${
                     isMobileMenuOpen
