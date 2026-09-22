@@ -66,6 +66,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="pl" className="scroll-smooth">
         <body className={`${inter.variable} ${oswald.variable} antialiased bg-zinc-950 text-zinc-300`}>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <div className="w-full">
             {children}
