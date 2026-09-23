@@ -59,7 +59,27 @@ const jsonLd = {
         "addressCountry": "PL"
     },
     "areaServed": ["Poznań", "Szamotuły", "Słopanowo", "Wielkopolskie"],
-    "priceRange": "$$"
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "22:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "09:00",
+            "closes": "22:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "09:00",
+            "closes": "22:00"
+        }
+    ]
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {

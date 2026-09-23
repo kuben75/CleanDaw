@@ -9,6 +9,7 @@ const Services = dynamic(() => import('@/components/features/Services').then(mod
 const Pricing = dynamic(() => import('@/components/features/Pricing').then(mod => mod.Pricing));
 const ProcessGallery = dynamic(() => import('@/components/features/Equipment').then(mod => mod.ProcessGallery));
 const DriveSection = dynamic(() => import('@/components/features/DriveSection').then(mod => mod.DriveSection));
+const FAQSection = dynamic(() => import('@/components/features/FAQSection').then(mod => mod.FAQSection));
 const ContactSection = dynamic(() => import('@/components/features/ContactSection').then(mod => mod.ContactSection));
 const GallerySection = dynamic(() => import('@/components/features/GallerySection').then(mod => mod.GallerySection));
 
@@ -19,9 +20,10 @@ export default function Home() {
             <AboutUs />
             <ReviewsSection />
             <Services />
-            <Pricing />
             <ProcessGallery />
+            <Pricing />
             <DriveSection />
+            <FAQSection />
             <ContactSection />
             <GallerySection />
             <Analytics />

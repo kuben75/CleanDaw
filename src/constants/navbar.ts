@@ -5,5 +5,6 @@ export const NAV_LINKS = [
     { label: 'Cennik', href: '/#cennik' },
     { label: 'Dojazd', href: '/#dojazd' },
     { label: 'Galeria', href: '/galeria' },
+    { label: 'FAQ', href: '/#faq' },
     { label: 'Kontakt', href: '/#kontakt' },
 ];

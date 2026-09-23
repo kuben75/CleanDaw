@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import {Home, Zap, Droplets, Banknote, MapPin, Map as MapIcon, Route, Phone} from 'lucide-react';
+import {Home, Zap, Droplets, Banknote, Map as MapIcon, Route, Phone} from 'lucide-react';
 import { Button } from '../ui/Button';
 
 const MapWidget = dynamic(() => import('./MapWidget'), {
@@ -93,15 +93,15 @@ export function DriveSection() {
                         )}
 
                         {isMapActive && (
-                        <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-wrap gap-6 text-xs font-bold uppercase tracking-wider text-zinc-300 bg-zinc-950/90 backdrop-blur-md py-3 px-6 mx-4 rounded-sm shadow-xl justify-center border border-zinc-800">
-                            <div className="flex items-center gap-2">
-                                <div className="w-4 h-4 rounded-sm bg-blue-500/30 border border-blue-500" /> Obszar standardowy
+                            <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-wrap gap-6 text-xs font-bold uppercase tracking-wider text-zinc-300 bg-zinc-950/90 backdrop-blur-md py-3 px-6 mx-4 rounded-sm shadow-xl justify-center border border-zinc-800">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-4 h-4 rounded-sm bg-blue-500/30 border border-blue-500" /> Obszar standardowy
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <div className="w-4 h-4 rounded-sm bg-zinc-500/30 border border-zinc-500" /> Strefa mobilna
+                                </div>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-4 h-4 rounded-sm bg-zinc-500/30 border border-zinc-500" /> Strefa mobilna
-                            </div>
-                        </div>
-                            )};
+                        )}
                     </div>
                 </div>
 

@@ -1,11 +1,12 @@
 "use client";
-import { Phone, Mail, MessageSquare, Send, CheckCircle2, AlertCircle, Terminal } from "lucide-react";
+import { Phone, Mail, MessageSquare, Send, CheckCircle2, AlertCircle, Terminal, Clock } from "lucide-react";
 import { useState } from "react";
 import { contactSchema, TContactFormValues } from "@/types/contact.schema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/Button";
 import { sendContactEmail } from "@/actions/sendEmail";
+import { OPENING_HOURS } from "@/constants/hours";
 import Link from "next/link";
 
 export function ContactSection() {
@@ -74,6 +75,23 @@ export function ContactSection() {
                             >
                                 Dane <span className="text-blue-500">kontaktowe</span>
                             </h3>
+
+                            <div className="flex items-start gap-6 mb-10 p-5 bg-zinc-950 border border-zinc-800 rounded-sm">
+                                <div className="w-14 h-14 bg-zinc-950 border border-blue-500/20 text-blue-500 rounded-sm flex items-center justify-center flex-shrink-0">
+                                    <Clock size={24} />
+                                </div>
+                                <div className="w-full">
+                                    <p className="text-zinc-300 text-xs font-bold uppercase tracking-widest mb-3">Godziny otwarcia</p>
+                                    <ul className="space-y-1.5">
+                                        {OPENING_HOURS.map((entry) => (
+                                            <li key={entry.day} className="flex items-center justify-between gap-4 text-sm">
+                                                <span className="text-zinc-400">{entry.day}</span>
+                                                <span className="font-bold text-white tracking-wide">{entry.hours}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
 
                             <div className="space-y-10">
                                 <a href="tel:+48535880525" className="flex items-center gap-6 group/item hover:translate-x-2 transition-transform duration-300">
